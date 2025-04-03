@@ -1,0 +1,17 @@
+general {
+        colors = true
+        interval = 5
+}
+
+order += "volume master"
+order += "tztime local"
+
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+}
