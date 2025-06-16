@@ -12,3 +12,7 @@ Required software and others:
 - fzf
 - zoxide
 - A nerd font (currently using JetBrains Mono NF)
+- i3wm
+- lxappearance
+- feh
+- pavucontrol
