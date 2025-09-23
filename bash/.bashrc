@@ -90,9 +90,6 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias pwr='poweroff'
-alias rbt='reboot'
-alias nv='nvim '
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -126,7 +123,7 @@ function parse_git_branch {
   git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
 }
 
-export PS1="\t \[\033[01;32m\]\w\[\033[01;33m\]\$(parse_git_branch)\[\033[01;00m\] $ "
+export PS1="\[\033[01;32m\]\w\[\033[01;33m\]\$(parse_git_branch)\[\033[01;00m\] $ " 
 
 eval "$(zoxide init bash)"
 
