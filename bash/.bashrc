@@ -87,9 +87,16 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='eza -alh'
+alias la='eza -A'
+alias l='eza -CF'
+alias nvconf='cd ~/.config/nvim'
+alias nv='nvim '
+alias ..='cd ..'
+alias bat='batcat '
+alias gst='git status'
+alias gad='git add'
+alias gct='git commit'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -129,6 +136,25 @@ eval "$(zoxide init bash)"
 
 source /usr/share/doc/fzf/examples/key-bindings.bash
 
+# Run ls after entering a directory.
 [[ $- == *i* ]] && function cd {
   builtin cd "$@" && ls -Ftr1
 }
+
+# Create dir and cd into it.
+function mkcd() {
+  mkdir -p "${1}"
+  cd "${1}"
+}
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Brew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# SDKMAN
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
