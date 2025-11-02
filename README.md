@@ -16,3 +16,7 @@ Required software and others:
 - bat
 - eza
 - stow
+- CommitMono Nerd Font
+- Zsh
+- OhMyZsh
+- Zsh auto-suggestions and zsh-syntax-highlighting
