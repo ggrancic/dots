@@ -20,3 +20,4 @@ Required software and others:
 - Zsh
 - OhMyZsh
 - Zsh auto-suggestions and zsh-syntax-highlighting
+- Adwaita Sans for Gnome's UI
