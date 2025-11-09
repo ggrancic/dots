@@ -114,6 +114,7 @@ alias ll='eza -alh'
 alias bcat='batcat'
 alias nvconf='cd ~/.config/nvim'
 alias nv='nvim'
+alias alconf='cd ~/.config/alacritty'
 
 # Init zoxide
 eval "$(zoxide init bash)"
@@ -142,3 +143,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Starship prompt
 eval "$(starship init zsh)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
